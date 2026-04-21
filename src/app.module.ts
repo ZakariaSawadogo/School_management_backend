@@ -19,11 +19,11 @@ import { StudentResult } from './grades/student-result.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: process.env.DB_HOST || 'localhost',
+      host: process.env.DB_HOST,
       port: parseInt(process.env.DB_PORT || '3306', 10),
-      username: process.env.DB_USERNAME || 'root',
-      password: process.env.DB_PASSWORD || 'Zackson226@',
-      database: process.env.DB_NAME || 'dbo_school_management',
+      username: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME,
       entities: [User, ProfileType, ClassLevel, Course, Grade, StudentResult],
       synchronize: true,
     }),
